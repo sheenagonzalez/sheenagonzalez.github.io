@@ -1,12 +1,38 @@
+html {
+  scroll-behavior: smooth;
+}
+#arrow-down {
+	color: #444444;
+	position: fixed;
+	right: 3em;
+	bottom: 3em;
+	animation: moveUpDown 1s linear infinite;
+	padding: 1em;
+}
+#arrow-down:hover {
+	color: #FFE483;
+}
+#arrow-down:active {
+	opacity: .5;
+}
+@keyframes moveUpDown {
+	0%, 100% {
+		bottom: 2em;
+	}
+	70% {
+		bottom: 1.5em;
+	}
+}
+
 /* Header */
 
 #header {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	padding: 7em 0;
+	padding: 7em 0 5em;
 }
-#text {
+#intro {
 	width: 21em;
 	height: 7em;
 	margin-top: 4em;
@@ -17,17 +43,17 @@
 	position: relative;
 	margin-left: 2em;
 }
-#intro {
+#text {
 	margin: 1em 1em 1em 0;
 }
 #resume {
-	margin: 13em 0 0 7em;
+	margin: 12.5em 0 0 7em;
 }
 #character img {
 	width: 21em;
 	height: 28em;
 }
-.square-dots img {
+#header .square-dots img {
 	width: 10em;
 	height: 10em;
 	position: absolute;
@@ -59,10 +85,27 @@
 	z-index: -1;
 }
 
+/* Mission */
+
+#mission {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 2em 9em;
+}
+#mission .square-dots img {
+	width: 10em;
+	height: 10em;
+	margin-right: 2em;
+}
+#mission .subheadline-text {
+	text-align: left;
+	width: 32em;
+}
+
 /* Work */
 
 #work {
-	top: ;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -92,4 +135,12 @@
 #left, #right {
 	display: flex;
 	flex-direction: column;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 850px) {
+	#arrow-down {
+		display: none;
+	}
 }
