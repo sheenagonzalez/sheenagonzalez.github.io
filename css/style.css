@@ -68,6 +68,12 @@ h3, .subheadline-text {
 	flex-direction: row;
 	align-content: center;
 }
+#navbar a:hover {
+	text-decoration: underline;
+}
+#navbar a:active {
+	opacity: .5;
+}
 #logo img {
 	width: 2.5em;
 	height: 2.5em;
@@ -100,7 +106,7 @@ h3, .subheadline-text {
 	transition: .5s;
 }
 #footer #icons svg:hover {
-	color: #F39D7F;
+	color: #FFE483;
 }
 #footer #icons svg:active {
 	opacity: .5;
@@ -164,6 +170,7 @@ h3, .subheadline-text {
 
 /* Media Queries */
 
+/* Tablets */
 @media screen and (max-width: 1000px) {
 	body {
 		font-size: 14px;
@@ -174,6 +181,7 @@ h3, .subheadline-text {
 		font-size: 12px;
 	}
 }
+/* Low-res Tablets */
 @media screen and (max-width: 700px) {
 	body {
 		font-size: 10px;
@@ -182,5 +190,11 @@ h3, .subheadline-text {
 @media screen and (max-width: 600px) {
 	body {
 		font-size: 8px;
+	}
+}
+/* Mobile */
+@media screen and (max-width: 480px) {
+	body {
+		font-size: 6px;
 	}
 }
